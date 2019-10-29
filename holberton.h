@@ -20,5 +20,6 @@ typedef struct frm
 int _printf(const char *, ...);
 int _printc(va_list);
 int _prints(va_list);
-
+int _printi(va_list);
+int _putchar(char);
 #endif
