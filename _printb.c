@@ -10,8 +10,7 @@ int _recprintb(unsigned int n);
 int _printb(va_list arg)
 {
 	unsigned int n = va_arg(arg, unsigned int);
-	if ((int)n < 0)
-		return (-1);
+
 	return (_recprintb(n));
 }
 
