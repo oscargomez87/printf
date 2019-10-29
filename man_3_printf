@@ -1,0 +1,43 @@
+.\" Manpage for _printf Function
+.\" Contact 1205@holbertonschool.com or 1181@holbertonschool.com.
+.TH _printf "29 October 2019" "1.0" "Manual for _printf"
+.SH NAME
+_printf checks format and executes function according to specifiers
+.SH SYNOPSIS
+.BI _printf (const char *, ...)
+.PP
+.B #include "holberton.h"
+.PP
+.B int _printf (const char *, ...)
+.PP
+.B int _formatcheck(va_list arg, const char *format, form_t *frm)
+.PP
+.B int _printc (va_list arg)
+.PP
+.B int _prints (va_list arg)
+.PP
+.B int _printi (va_list arg)
+.PP
+.B int _printd (va_list arg)
+.PP
+.B int _putchar (char c)
+.SH DESCRIPTION
+The _printf function writes in the standard output stream according to the format and C89.
+.SH RETURN VALUE
+The _printf function return the number of characters printed excluding the null byte used to end output to strings.
+.SH format
+The format is a character string that specifies the type of the argument and starts with the % character.
+.SH  specifiers
+.TP 
+.B c
+.R prints a character of a string.
+.TP 
+.B s
+.R prints a given string. Const char * is a pointer to a string.
+.TP
+.B d, i
+.R write the integer argument that is received signed and base 10.  
+.SH BUGS
+.R Code as _printf(foo); indicates a bug since it may contains a % sign. It can cause a security hole if the user is untrusted.
+.SH AUTHOR
+Oscar Stiven Gómez Toro 1181@holbertonschool.com and Aiko Mi 1205@holbertonschool.com 
