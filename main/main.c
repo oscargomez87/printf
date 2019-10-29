@@ -11,7 +11,6 @@ int main(void)
 {
 	int len;
 	int len2;
-	int ni, pi;
 
 	printf("=====================\n");
 	printf("*****CHAR*****\n");
@@ -57,6 +56,15 @@ int main(void)
 	len2 = printf("String:[%s]\n", NULL);
 	_printf("Len:[%d], Len2:[%d]\n", len, len2);
 	printf("Len:[%d], Len2:[%d]\n", len, len2);
+
+	/*
+	 *Binary
+	 */
+	printf("\n=====================\n");
+        printf("*****BINARY*****\n");
+        printf("=====================\n");
+	len = _printf("%b\n", -11);
+	_printf("%d\n", len);
 
 	/*
 	 *no arguments
