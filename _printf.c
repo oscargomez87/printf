@@ -13,6 +13,8 @@ int _printf(const char *format, ...)
 	form_t frm[] = {
 		{"c", _printc},
 		{"s", _prints},
+		{"i", _printi},
+		{"d", _printi},
 		{NULL, NULL}
 	};
 	va_list arg;
