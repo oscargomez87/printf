@@ -1,43 +1,67 @@
 .\" Manpage for _printf Function
 .\" Contact 1205@holbertonschool.com or 1181@holbertonschool.com.
-.TH _printf "29 October 2019" "1.0" "Manual for _printf"
+.TH _printf 1 "29 October 2019" "1.0" "Manual for _printf"
 .SH NAME
-_printf checks format and executes function according to specifiers
+_printf \- custom formatted output conversion
 .SH SYNOPSIS
-.BI _printf (const char *, ...)
+.B #include \(dqholberton.h\(dq
 .PP
-.B #include "holberton.h"
+.B int _printf (const char *
+.I format
+.B , ...)
 .PP
-.B int _printf (const char *, ...)
+.B int _printc (va_list
+.I arg
+.B )
 .PP
-.B int _formatcheck(va_list arg, const char *format, form_t *frm)
+.B int _prints (va_list
+.I arg
+.B)
 .PP
-.B int _printc (va_list arg)
+.B int _printi (va_list
+.I arg
+.B )
 .PP
-.B int _prints (va_list arg)
+.B int _printd (va_list
+.I arg
+.B )
 .PP
-.B int _printi (va_list arg)
-.PP
-.B int _printd (va_list arg)
-.PP
-.B int _putchar (char c)
+.B int _putchar (char
+.I c
+.B )
 .SH DESCRIPTION
-The _printf function writes in the standard output stream according to the format and C89.
-.SH RETURN VALUE
-The _printf function return the number of characters printed excluding the null byte used to end output to strings.
-.SH format
-The format is a character string that specifies the type of the argument and starts with the % character.
-.SH  specifiers
-.TP 
+.B The _printf function produces output according for the
+.I format
+.B , then writes to standard output stream.
+.SS Return Value
+.B Upon success, the function return the number of characters printed excluding the null byte used to end output to strings.
+.SS Format of the format string
+.B The format string is composed of zero or more directives: ordinary characters (not %) wich are copied to the output stream as they are and conversion specifica\
+tions, wich fetch 0 or more argumennts. The conversion specification are marked by the character % and ends with a conversion specifier.
+.PP
+.B The arguments must correspond with the conversion specifiers, and they are used in the given order.
+.SS  The conversion specifiers
+.B Characters preceded by the character % that specifie the type of convertion to be applied. The specifiers and their meanings are:
+.TP
 .B c
-.R prints a character of a string.
-.TP 
+.B The argument is converted into an int then prints the character represented by that int (refer to ascii table).
+.TP
 .B s
-.R prints a given string. Const char * is a pointer to a string.
+.B A
+.I char *
+.B argument (string) is expected. The string is printed till the terminating null byte.
 .TP
 .B d, i
-.R write the integer argument that is received signed and base 10.  
+.B An int argument is expected, prints the argument that is received signed and in base 10.
+.SH CONFORMING TO
+.B Conforms  to  C89, this function was not tested for C99.
 .SH BUGS
-.R Code as _printf(foo); indicates a bug since it may contains a % sign. It can cause a security hole if the user is untrusted.
+.R Code as _printf(foo); indicates a bug since it may contain %n wich can cause a security hole if the user is untrusted.
+.SH EXAMPLE
+.B To print an integer:
+.IP
+.B #include \(dqholberton.h\(dq
+.br
+.B _printf(\(dqinteger : %d\en\(dq, 98);
 .SH AUTHOR
-Oscar Stiven Gómez Toro 1181@holbertonschool.com and Aiko Mi 1205@holbertonschool.com 
+Oscar Stiven Gómez Toro 1181@holbertonschool.com and Aiko Mi 1205@holbertonschool.com
