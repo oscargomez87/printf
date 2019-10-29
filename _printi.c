@@ -12,7 +12,7 @@ int _printi(va_list arg)
 	int number = va_arg(arg, int);
 	int countPrinted = 0;
 	int intPos[10];
-	int i;
+	int i, j = 0;
 
 	intPos[0] = number / maxInt;
 	for (i = 1; i < 10; i++)
@@ -31,7 +31,8 @@ int _printi(va_list arg)
 	i = 0;
 	while (i < 10)
 	{
-		if (intPos[i] != 0 || i == 9)
+		j += intPos[i];
+		if (j != 0 || i == 9)
 		{
 			_putchar('0' + intPos[i]);
 			countPrinted++;
