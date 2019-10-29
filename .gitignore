@@ -3,4 +3,5 @@
 !**/main
 !**/.gitignore
 !**/*.c
+!**/*.h
 !**/README.md
