@@ -5,3 +5,4 @@
 !**/*.c
 !**/*.h
 !**/README.md
+!**/man_3_printf
