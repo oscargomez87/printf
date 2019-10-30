@@ -16,6 +16,10 @@ int _printf(const char *format, ...)
 		{"i", _printi},
 		{"d", _printi},
 		{"b", _printb},
+		{"u", _printu},
+		{"o", _printo},
+		{"x", _printx},
+		{"X", _printX},
 		{NULL, NULL}
 	};
 	va_list arg;
