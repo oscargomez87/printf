@@ -25,6 +25,6 @@ int _printb(va_list);
 int _printu(va_list);
 int _printo(va_list);
 int _printx(va_list);
-int _printX(va_list);
+int _printcx(va_list);
 int _putchar(char);
 #endif
