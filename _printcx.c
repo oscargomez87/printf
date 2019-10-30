@@ -2,4 +2,5 @@
 
 int _printcx(va_list arg)
 {
+	return (0);
 }
