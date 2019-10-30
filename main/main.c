@@ -63,7 +63,10 @@ int main(void)
 	printf("\n=====================\n");
         printf("*****BINARY*****\n");
         printf("=====================\n");
-	len = _printf("%b\n", -11);
+	_printf("%d\n", INT_MAX);
+	len = _printf("%b\n", INT_MAX);
+	_printf("%d\n", len);
+	len = _printf("%b\n", 0);
 	_printf("%d\n", len);
 
 	/*
