@@ -26,4 +26,4 @@ return (0);
 }
 # Authors
 Oscar Steven Gomez
-Aikomi
+and Aikomi
